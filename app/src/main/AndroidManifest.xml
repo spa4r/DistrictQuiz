@@ -10,12 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DistrictQuiz">
         <activity android:name=".MainActivity"/>
-        <activity android:name=".district.MainDistrict">
+        <activity android:name=".connection.MainConnection">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".district.MainDistrict"/>
         <activity android:name=".district.DistrictQuestion"/>
     </application>
 

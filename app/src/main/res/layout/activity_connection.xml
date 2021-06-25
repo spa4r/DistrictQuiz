@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/imageview_connection_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <EditText
+        android:id="@+id/textview_connection_utilisateur"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/imageview_connection_image"
+        android:hint="@string/app_user"
+        android:inputType="textEmailAddress"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/textview_connection_password"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textview_connection_utilisateur"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:hint="@string/app_password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/button_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_connection_password"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/app_connection" />
+
+</RelativeLayout>
