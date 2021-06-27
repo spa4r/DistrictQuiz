@@ -10,6 +10,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.districtquiz.R;
 import com.example.districtquiz.district.MainDistrict;
+import com.example.districtquiz.utils.RequestTask;
+
+import java.io.IOException;
 import java.util.Locale;
 
 public class MainConnection extends AppCompatActivity {
@@ -23,7 +26,6 @@ public class MainConnection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connection);
-        Locale.getDefault().getLanguage();
 
         this.setUtilisateur();
         this.setPassword();
@@ -41,6 +43,7 @@ public class MainConnection extends AppCompatActivity {
                     toast.show();
                     Intent intent= new Intent(getApplicationContext(), MainDistrict.class);
                     startActivity(intent);
+                    finish();
                 }
                 else {
                     Toast toast = Toast.makeText(getApplicationContext(),"Connection ratée",Toast.LENGTH_SHORT);

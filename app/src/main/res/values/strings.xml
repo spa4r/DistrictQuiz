@@ -3,4 +3,6 @@
     <string name="app_password">Password</string>
     <string name="app_user">User</string>
     <string name="app_connection">Connection</string>
+    <string name="app_reponse">Answer</string>
+    <string name="app_verification">Check</string>
 </resources>

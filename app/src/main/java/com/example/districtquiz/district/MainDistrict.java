@@ -2,6 +2,7 @@ package com.example.districtquiz.district;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ import com.example.districtquiz.R;
 import com.example.districtquiz.district.District;
 import com.example.districtquiz.district.DistrictAdapter;
 import com.example.districtquiz.district.DistrictQuestion;
+import com.example.districtquiz.utils.RequestTask;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -38,10 +40,10 @@ public class MainDistrict extends AppCompatActivity {
     private void setDistricts() {
 
         this.districts = new ArrayList<>();
-        this.districts.add(new District(1,"Louvre","Description Louvre",50.0f,50.0f,R.drawable.img_district1));
-        this.districts.add(new District(2,"Bourse","Description Bourse",50.0f,50.0f,R.drawable.img_district2));
-        this.districts.add(new District(3,"Temple","Description Temple",50.0f,50.0f,R.drawable.img_district3));
-        this.districts.add(new District(4,"Hôtel-de-ville","Description Hôtel-de-ville",50.0f,50.0f,R.drawable.img_district4));
+        this.districts.add(new District(0,"Louvre","Description Louvre",50.0f,50.0f,R.drawable.img_district1));
+        this.districts.add(new District(1,"Bourse","Description Bourse",50.0f,50.0f,R.drawable.img_district2));
+        this.districts.add(new District(2,"Temple","Description Temple",50.0f,50.0f,R.drawable.img_district3));
+        this.districts.add(new District(3,"Hôtel-de-ville","Description Hôtel-de-ville",50.0f,50.0f,R.drawable.img_district4));
 
     }
 
