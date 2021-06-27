@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.districtquiz.R;
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 
 public class MainDistrict extends AppCompatActivity {
 
+    private SearchView searchView;
     private GridView gridView;
     private ArrayList<District> districts;
     DistrictAdapter districtAdapter;
@@ -34,7 +36,33 @@ public class MainDistrict extends AppCompatActivity {
         this.setDistricts();
         this.setDistrictAdapter();
         this.setGridView();
+        this.setSearchView();
 
+    }
+
+    public void setSearchView () {
+        searchView = (SearchView) findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                if(districtAdapter.districtInArrayList(query)) {
+                    districtAdapter.getFilter().filter(query);
+                }
+                else {
+                    Toast.makeText(MainDistrict.this, "No Match found",Toast.LENGTH_LONG).show();
+                }
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+
+        });
     }
 
     private void setDistricts() {
